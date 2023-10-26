@@ -244,3 +244,18 @@ console.log("Level order traversal (after rebalancing):", tree.levelOrder());
 console.log("Inorder traversal (after rebalancing):", tree.inOrder());
 console.log("Preorder traversal (after rebalancing):", tree.preorder());
 console.log("Postorder traversal (after rebalancing):", tree.postorder());
+
+const prettyPrint = (node, prefix = "", isLeft = true) => {
+    if (node === null) {
+      return;
+    }
+    if (node.right !== null) {
+      prettyPrint(node.right, `${prefix}${isLeft ? "│   " : "    "}`, false);
+    }
+    console.log(`${prefix}${isLeft ? "└── " : "┌── "}${node.data}`);
+    if (node.left !== null) {
+      prettyPrint(node.left, `${prefix}${isLeft ? "    " : "│   "}`, true);
+    }
+  };
+
+  prettyPrint(tree.root);
