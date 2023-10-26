@@ -1,11 +1,10 @@
-# 🚫 UNDER CONSTRUCTION 🚫
-
 # Project: Binary Search Tree
 
-## Live Demo 👉 
+## Live Demo 👉 [Binary search tree](https://curveservices.github.io/TOP-binary-search-tree/)
 
 ## PC View 👇
 
+<img width="1045" alt="Screenshot 2023-10-26 at 13 29 03" src="https://github.com/curveservices/TOP-binary-search-tree/assets/101556296/3343746c-6be9-4e7b-a41f-fe81f6d170ed">
 
 ## Overview
 
@@ -15,6 +14,21 @@
 
 - [This article](https://www.geeksforgeeks.org/sorted-array-to-balanced-bst/)
 - [This video](https://www.youtube.com/watch?v=VCTP81Ij-EM)
+- prettyPrint function from theOdinProject
+```
+const prettyPrint = (node, prefix = "", isLeft = true) => {
+  if (node === null) {
+    return;
+  }
+  if (node.right !== null) {
+    prettyPrint(node.right, `${prefix}${isLeft ? "│   " : "    "}`, false);
+  }
+  console.log(`${prefix}${isLeft ? "└── " : "┌── "}${node.data}`);
+  if (node.left !== null) {
+    prettyPrint(node.left, `${prefix}${isLeft ? "    " : "│   "}`, true);
+  }
+};
+```
 
 ## Obejective
 
@@ -49,7 +63,7 @@ Write a simple driver script that does the following:
           
 
 
-***<a href="https://twitter.com/Crypto_Rozla"> Rozla-Dev </a> 00-00-2023***
+***<a href="https://twitter.com/Crypto_Rozla"> Rozla-Dev </a> 26-10-2023***
 
 
-[Back to top 👆](#project)
+[Back to top 👆](#project-binary-search-tree)
